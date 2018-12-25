@@ -6,312 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1102a44-488c-475f-b195-90f8ef1578e3" name="Default Changelist" comment="1224_01">
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/additional-methods.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/additional-methods.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/jquery-validation-sri.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/jquery.validate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/jquery.validate.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_ar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_ar.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_az.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_az.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_bg.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_bg.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_bn_BD.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_bn_BD.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_ca.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_ca.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_cs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_cs.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_da.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_da.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_de.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_de.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_el.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_el.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_es.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_es.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_es_AR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_es_AR.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_es_PE.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_es_PE.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_et.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_et.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_eu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_eu.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_fa.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_fa.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_fi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_fi.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_fr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_fr.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_ge.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_ge.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_gl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_gl.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_he.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_he.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_hr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_hr.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_hu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_hu.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_hy_AM.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_hy_AM.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_id.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_id.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_is.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_is.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_it.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_it.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_ja.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_ja.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_ka.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_ka.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_kk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_kk.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_ko.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_ko.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_lt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_lt.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_lv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_lv.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_mk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_mk.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_my.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_my.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_nl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_nl.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_no.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_no.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_pl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_pl.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_pt_BR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_pt_BR.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_pt_PT.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_pt_PT.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_ro.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_ro.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_ru.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_ru.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_sd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_sd.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_si.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_si.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_sk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_sk.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_sl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_sl.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_sr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_sr.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_sr_lat.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_sr_lat.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_sv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_sv.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_th.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_th.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_tj.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_tj.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_tr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_tr.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_uk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_uk.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_ur.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_ur.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_vi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_vi.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_zh.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_zh.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_zh_TW.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/messages_zh_TW.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/methods_de.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/methods_de.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/methods_es_CL.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/methods_es_CL.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/methods_fi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/methods_fi.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/methods_it.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/methods_it.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/methods_nl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/methods_nl.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/methods_pt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/dist/localization/methods_pt.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/example/images/icons/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/example/images/icons/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/example/images/icons/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/example/images/icons/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/example/images/icons/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/example/images/icons/6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/js/jquery.validate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/jsp/customer/aboutMe.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/jsp/customer/journeyMSG.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/jsp/customer/myServer.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/jsp/customer/report.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/jsp/customer/tibs.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/jsp/customer/upcoming.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/lib/jquery-1.11.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/lib/jquery-1.7.2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/lib/jquery-1.8.3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/lib/jquery-1.9.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/lib/jquery-3.1.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/lib/jquery.form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/lib/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/lib/jquery.mockjax-1.5.3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/lib/jquery.mockjax-2.2.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/lib/jquery.mockjax.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/lib/jquery.simulate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/lib/require.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/additional-methods.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/additional-methods.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/jquery-validation-sri.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/jquery.validate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/jquery.validate.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_ar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_ar.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_az.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_az.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_bg.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_bg.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_bn_BD.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_bn_BD.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_ca.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_ca.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_cs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_cs.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_da.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_da.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_de.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_de.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_el.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_el.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_es.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_es.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_es_AR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_es_AR.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_es_PE.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_es_PE.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_et.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_et.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_eu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_eu.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_fa.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_fa.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_fi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_fi.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_fr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_fr.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_ge.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_ge.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_gl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_gl.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_he.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_he.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_hr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_hr.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_hu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_hu.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_hy_AM.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_hy_AM.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_id.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_id.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_is.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_is.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_it.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_it.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_ja.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_ja.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_ka.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_ka.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_kk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_kk.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_ko.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_ko.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_lt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_lt.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_lv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_lv.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_mk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_mk.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_my.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_my.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_nl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_nl.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_no.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_no.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_pl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_pl.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_pt_BR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_pt_BR.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_pt_PT.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_pt_PT.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_ro.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_ro.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_ru.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_ru.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_sd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_sd.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_si.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_si.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_sk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_sk.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_sl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_sl.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_sr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_sr.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_sr_lat.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_sr_lat.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_sv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_sv.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_th.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_th.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_tj.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_tj.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_tr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_tr.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_uk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_uk.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_ur.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_ur.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_vi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_vi.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_zh.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_zh.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_zh_TW.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/messages_zh_TW.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/methods_de.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/methods_de.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/methods_es_CL.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/methods_es_CL.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/methods_fi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/methods_fi.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/methods_it.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/methods_it.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/methods_nl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/methods_nl.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/methods_pt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/dist/localization/methods_pt.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/example/images/icons/aboutMe.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/example/images/icons/journey.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/example/images/icons/report.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/example/images/icons/server.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/example/images/icons/tibs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/example/images/icons/upcoming.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/jsp/customer/aboutMe.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/jsp/customer/journeyMSG.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/jsp/customer/myServer.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/jsp/customer/report.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/jsp/customer/tibs.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/jsp/customer/upcoming.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/uthai/controller/WebControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/com/uthai/controller/WebControl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/WEB-INF/classes/com/uthai/controller/WebControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/WEB-INF/classes/com/uthai/controller/WebControl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/jsp/customer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/jsp/customer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/style/weui.css" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/WeiXin_Web_exploded/style/weui.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/uthai/controller/WebControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/uthai/controller/WebControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/boss.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/boss.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/customer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/customer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/style/weui.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/style/weui.css" afterDir="false" />
-    </list>
+    <list default="true" id="e1102a44-488c-475f-b195-90f8ef1578e3" name="Default Changelist" comment="1224_01" />
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -394,13 +89,21 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-1574527743">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/jsp/customer.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
+            <state relative-caret-position="570">
               <caret line="19" column="7" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="7" />
             </state>
           </provider>
@@ -409,7 +112,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/jsp/customer/journeyMSG.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
+            <state relative-caret-position="210">
               <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
             </state>
           </provider>
@@ -418,7 +121,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/jsp/boss.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-180">
+            <state relative-caret-position="-870">
               <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
             </state>
           </provider>
@@ -894,8 +597,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -952,6 +653,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -962,7 +665,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545728828385" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/UThaiCRM" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -1196,6 +899,7 @@
       <workItem from="1545613549125" duration="23942000" />
       <workItem from="1545699463602" duration="5461000" />
       <workItem from="1545707211106" duration="12618000" />
+      <workItem from="1545729689041" duration="142000" />
     </task>
     <task id="LOCAL-00001" summary="1224_01">
       <created>1545622953392</created>
@@ -1268,13 +972,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="249527000" />
+    <option name="totallyTimeSpent" value="249669000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21588486" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21801706" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
@@ -1315,6 +1018,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/UThaiCRM" />
+    </ignored-roots>
     <MESSAGE value="1224_01" />
     <option name="LAST_COMMIT_MESSAGE" value="1224_01" />
   </component>
@@ -1594,13 +1300,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/jsp/customen_info.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="15" column="26" selection-end-line="78" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/example/images/icons/tibs.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -1613,29 +1312,36 @@
     <entry file="file://$PROJECT_DIR$/web/example/images/icons/aboutMe.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/jsp/customer.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="19" column="7" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/jsp/customer/journeyMSG.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/example/images/icons/journey.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/web/example/images/icons/server.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/jsp/customer.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="19" column="7" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/jsp/customer/journeyMSG.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/jsp/customen_info.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="15" column="26" selection-end-line="78" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/jsp/boss.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-180">
+        <state relative-caret-position="-870">
           <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
         </state>
       </provider>

@@ -19,6 +19,7 @@
     <script src="../../dist/jquery.validate.js"></script>
 </head>
 <body>
+<h1 style="align-items: center;">出行攻略</h1>
 
 </body>
 </html>
