@@ -1,6 +1,8 @@
 package com.uthai.service.impl;
 
+import com.uthai.mapper.TbCustomerMapper;
 import com.uthai.mapper.TbUserRoleMapper;
+import com.uthai.po.TbCustomer;
 import com.uthai.po.TbUserRole;
 import com.uthai.service.UserService;
 import org.apache.shiro.crypto.hash.Md5Hash;
@@ -14,6 +16,8 @@ import java.util.Map;
 public class UserServiceImpl implements UserService {
     @Resource
     TbUserRoleMapper userRoleMapper;
+    @Resource
+    TbCustomerMapper customerMapper;
     @Override
     public TbUserRole login(Map<String, String> map) {
         String openid=map.get("openid");
@@ -58,6 +62,16 @@ public class UserServiceImpl implements UserService {
                 result = true;
                 break;
             }
+        }
+        return result;
+    }
+
+    @Override
+    public boolean isFirstLoin(String openid) {
+        boolean result=true;
+        TbCustomer customer = customerMapper.selectByPrimaryKey(openid);
+        if (customer!=null){
+            result=false;
         }
         return result;
     }

@@ -66,11 +66,11 @@ public class WebControl {
         Map<String,String> map= webService.getUserInfo(sessionInfo.getString("access_token"),sessionInfo.getString("openid"));
         TbUserRole tbUserRole= userService.login(map);
         if (tbUserRole!= null){
+            av.addObject("userName",tbUserRole.getUserId());
             av.addObject("userRole",tbUserRole.getUserRole());
             av.addObject("branch",tbUserRole.getBranchGroup());
             av.setViewName(tbUserRole.getUserRole());
         } else{
-            av.addObject("userName",tbUserRole.getUserId());
             av.addObject("openId",map.get("openid"));
             av.addObject("sex",map.get("sex"));
             av.addObject("province",map.get("province"));
@@ -80,44 +80,9 @@ public class WebControl {
         }
         return av;
     }
-    @RequestMapping(value = "/regist")
-    public ModelAndView regist(@Param("userName")String userName,@Param("password")String password ,@Param("code")String code, HttpSession session){
-        TbUserRole userRole= new TbUserRole();
-        JSONObject jsonObject= (JSONObject) session.getAttribute("user_info");
-        userRole.setUserId(userName);
-        userRole.setOpenId(jsonObject.getString("openid"));
-        userRole.setPass(password);
-        userRole.setUserRole("customer");
-        ModelAndView av= new ModelAndView();
-        String sessionCode= (String) session.getAttribute("code");
-        code=code.toUpperCase();
-        System.out.println(code+sessionCode);
-        if (!code.equals(sessionCode)){
-            av.addObject("status","验证码错误！");
-            av.addObject("userName",userName);
-            av.setViewName("regist");
-            return  av;
-        }
-        if (userService.checkIfExit(userName)){
-            av.addObject("status","用户名已存在！");
-            av.addObject("userName",userName);
-            av.setViewName("regist");
-            return av;
-        }
-        int result=userService.register(userRole);
-        if (result==0) //注册成功
-        {
-            av.addObject("userRole",userRole.getUserRole());
-            av.addObject("branch",userRole.getBranchGroup());
-            av.setViewName(userRole.getUserRole());
-            return av;
-        }
-        return av;
-    }
 
     @RequestMapping(value = "/getImgCode")
     public void getCodePic(HttpServletRequest request , HttpServletResponse response){
-        ModelAndView av= new ModelAndView();
         try {
             request.setCharacterEncoding("gb2312");
         } catch (UnsupportedEncodingException e) {

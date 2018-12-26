@@ -21,7 +21,7 @@
 <body>
 <div class="weui-cells__title">注册</div>
 <div class="weui-cells weui-cells_form" >
-    <form  id="getUserBase" action="/web/regist.do">
+    <form  id="getUserBase" action="/user/regist.do">
         <div class="weui-cell" >
             <div class="weui-cell__hd"><label class="weui-label">用户名</label></div>
         <div class="weui-cell__bd">

@@ -8,4 +8,5 @@ public interface UserService {
     TbUserRole login(Map<String,String> map);
     int register(TbUserRole userRole);
     boolean checkIfExit(String userName);
+    boolean isFirstLoin(String openid);
 }

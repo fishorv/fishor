@@ -20,47 +20,51 @@
 </head>
 <body>
     <div class="page__hd">
-        <h1 class="page__title">个人中心</h1>
-        <p class="page__desc">您好！${userName}</p>
+        <h1 class="page__title" id="userNameForTittle"></h1>
+        <p class="page__desc">您好！</p>
         <br><br><br><br><br><br>
     </div>
     <div class="weui-grids">
-        <a href="customer/upcoming.jsp" class="weui-grid">
+        <a href="/jsp/customer/upcoming.jsp" class="weui-grid">
             <div class="weui-grid__icon">
                 <img src="../example/images/icons/upcoming.png" alt="">
             </div>
             <p class="weui-grid__label">代办事项</p>
         </a>
-        <a href="customer/myServer.jsp" class="weui-grid">
+        <a href="/jsp/customer/myServer.jsp" class="weui-grid">
             <div class="weui-grid__icon">
                 <img src="../example/images/icons/server.png" alt="">
             </div>
             <p class="weui-grid__label">我的客服</p>
         </a>
-        <a href="customer/report.jsp" class="weui-grid">
+        <a href="/jsp/customer/report.jsp" class="weui-grid">
             <div class="weui-grid__icon">
                 <img src="../example/images/icons/report.png" alt="">
             </div>
             <p class="weui-grid__label">查报告</p>
         </a>
-        <a href="customer/journeyMSG.jsp" class="weui-grid">
+        <a href="/jsp/customer/journeyMSG.jsp" class="weui-grid">
             <div class="weui-grid__icon">
                 <img src="../example/images/icons/journey.png" alt="">
             </div>
             <p class="weui-grid__label">旅程信息</p>
         </a>
-        <a href="customer/tibs.jsp" class="weui-grid">
+        <a href="/jsp/customer/tibs.jsp" class="weui-grid">
             <div class="weui-grid__icon">
                 <img src="../example/images/icons/tibs.png" alt="">
             </div>
             <p class="weui-grid__label">曼谷攻略</p>
         </a>
-        <a href="customer/aboutMe.jsp" class="weui-grid">
+        <a href="/jsp/customer/aboutMe.jsp" class="weui-grid">
             <div class="weui-grid__icon">
                 <img src="../example/images/icons/aboutMe.png" alt="">
             </div>
             <p class="weui-grid__label">个人中心</p>
         </a>
     </div>
+    <script type="text/javascript">
+        $('#userNameForTittle').html('${userName}');
+        console.log('userName'+'${userName}');
+    </script>
 </body>
 </html>

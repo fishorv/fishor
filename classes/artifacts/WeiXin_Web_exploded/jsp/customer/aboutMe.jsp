@@ -19,6 +19,13 @@
     <script src="../../dist/jquery.validate.js"></script>
 </head>
 <body>
-
+<script type="text/javascript">
+    var url="/user/firstLogin.do"
+    $.get(url,function (data) {
+        if (data=="true"){
+            window.location.href="/jsp/customer_info.jsp"
+        }
+    })
+</script>
 </body>
 </html>
