@@ -75,4 +75,15 @@ public class UserServiceImpl implements UserService {
         }
         return result;
     }
+
+    @Override
+    public boolean saveCustomer(TbCustomer customer) {
+        boolean result=true;
+        try {
+            customerMapper.insert(customer);
+        }catch (Exception e){
+            result=false;
+        }
+        return result;
+    }
 }

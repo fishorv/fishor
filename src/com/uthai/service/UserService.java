@@ -1,5 +1,6 @@
 package com.uthai.service;
 
+import com.uthai.po.TbCustomer;
 import com.uthai.po.TbUserRole;
 
 import java.util.Map;
@@ -9,4 +10,5 @@ public interface UserService {
     int register(TbUserRole userRole);
     boolean checkIfExit(String userName);
     boolean isFirstLoin(String openid);
+    boolean saveCustomer(TbCustomer customer);
 }

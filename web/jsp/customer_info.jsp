@@ -18,7 +18,7 @@
 <body>
 <div class="weui-cells__title">完善个人信息</div>
 <div class="weui-cells weui-cells_form">
-    <form  id="getUserInfo" action="/user/formCustomer.do">
+    <%--<form  id="getUserInfo" action="/user/formCustomer.do">--%>
     <div class="weui-cell" >
         <div class="weui-cell__hd"><label class="weui-label">姓名</label></div>
         <div class="weui-cell__bd">
@@ -26,7 +26,7 @@
         </div>
     </div>
     <div class="weui-cells__title">性别</div>
-    <div class="weui-cells weui-cells_radio" id="gender">
+    <div class="weui-cells weui-cells_radio">
         <label class="weui-cell weui-check__label" for="x11">
             <div class="weui-cell__bd">
                 <p>男</p>
@@ -58,33 +58,53 @@
             <input class="weui-input" id="tel" type="text" placeholder="手机号"/>
         </div>
         <div class="weui-cell__ft">
-        <button class="weui-vcode-btn" id="getCode">获取验证码</button>
+        <button class="weui-vcode-btn" onclick="telCode()">获取验证码</button>
         </div>
     </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd">
+                <label class="weui-label">验证码</label></div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" name = "code" id="code" type="text"/>
+            </div>
+        </div>
     <div class="weui-btn-area">
         <a class="weui-btn weui-btn_primary" href="javascript:" id="doForm">确定</a>
     </div>
-    </form>
+    <%--</form>--%>
 </div>
 <script type="text/javascript">
-    $('#doForm').on('click',function () {
-        $.post("/user/formCustomer.do",{
-            "userName":$('#userName').val(),
-            "userAge":$('#userAge').val(),
-            "gender":$("input[name='radio1']:checked").val()
-        },function (data) {
-            alert(data);
-            console.log(data);
-        })
-    })
-    $('#getCode').on('click',function () {
-        $.post("/user/formCustomer.do",{
+    function telCode() {
+        alert("/user/sendCode.do");
+        $.post("/user/sendCode.do",{
             "telNumber":$('#tel').val()
-        },function (data) {
-            alert(data);
-            console.log(data);
         })
-    })
+    }
+    $('#doForm').on('click',function () {
+        $.post("/user/checkCode.do",{
+            "code":$('#code').val()
+        },function (data) {
+          if (data=="false"){
+              alert("验证码不正确！")
+              return false;
+          }
+          else {
+              $.post("/user/formCustomer.do",{
+                  "userName":$('#userName').val(),
+                  "userAge":$('#userAge').val(),
+                  "gender":$("input[name='radio1']:checked").val(),
+                  "userTel":$('#tel').val()
+              },function (data) {
+                  if (data=="true"){
+                      window.location.href="/jsp/customer.jsp"
+                  } else{
+                      alert("创建失败")
+                  }
+              })
+          }
+        })
+
+    });
 </script>
 </body>
 </html>

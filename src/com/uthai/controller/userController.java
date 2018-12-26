@@ -68,8 +68,23 @@ public class userController {
     }
     @RequestMapping(value = "/formCustomer")
     @ResponseBody
-    public String formCustomer(TbCustomer customer){
+    public String formCustomer(TbCustomer customer,HttpSession session){
+        JSONObject userInfo = (JSONObject) session.getAttribute("user_info");
+        customer.setUserId(userInfo.getString("openid"));
+        boolean result=userService.saveCustomer(customer);
         System.out.println(customer.getGender());
-        return customer.getUserName();
+        return String.valueOf(result);
+    }
+    @RequestMapping(value = "/sendCode")
+    public void sendCode(@Param("telNumber") String telNumber){
+        System.out.println(telNumber);
+    }
+    @RequestMapping(value = "/checkCode")
+    @ResponseBody
+    public String checkCode(@Param("code") String code){
+    String codeFromBD="1234";
+    if (code.equals(codeFromBD))
+        return "true";
+    return "false";
     }
 }
