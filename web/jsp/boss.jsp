@@ -21,41 +21,41 @@
 <body>
 <div class="page__hd">
     <h1 class="page__title">个人中心</h1>
-    <p class="page__desc">您好！${userName}</p>
+    <p class="page__desc">您好！超级管理员${userName}</p>
     <br><br><br><br><br><br>
 </div>
 <div class="weui-grids">
-    <a href="customer/upcoming.jsp" class="weui-grid">
+    <a href="boss/customerList.jsp" class="weui-grid">
         <div class="weui-grid__icon">
-            <img src="../example/images/icons/upcoming.png" alt="">
+            <img src="../example/images/icons/customer.png" alt="">
         </div>
-        <p class="weui-grid__label">代办事项</p>
+        <p class="weui-grid__label">客户列表</p>
     </a>
-    <a href="customer/myServer.jsp" class="weui-grid">
+    <a href="boss/jobDiv.jsp" class="weui-grid">
         <div class="weui-grid__icon">
-            <img src="../example/images/icons/server.png" alt="">
+            <img src="../example/images/icons/msg.png" alt="">
         </div>
-        <p class="weui-grid__label">我的客服</p>
+        <p class="weui-grid__label">任务安排</p>
     </a>
-    <a href="customer/report.jsp" class="weui-grid">
+    <a href="boss/allComingUp.jsp" class="weui-grid">
         <div class="weui-grid__icon">
-            <img src="../example/images/icons/report.png" alt="">
+            <img src="../example/images/icons/prosses.png" alt="">
         </div>
-        <p class="weui-grid__label">查报告</p>
+        <p class="weui-grid__label">所有待办</p>
     </a>
-    <a href="customer/journeyMSG.jsp" class="weui-grid">
+    <a href="boss/branch.jsp" class="weui-grid">
         <div class="weui-grid__icon">
-            <img src="../example/images/icons/journey.png" alt="">
+            <img src="../example/images/icons/dept.png" alt="">
         </div>
-        <p class="weui-grid__label">旅程信息</p>
+        <p class="weui-grid__label">分公司</p>
     </a>
-    <a href="customer/tibs.jsp" class="weui-grid">
+    <a href="boss/empList.jsp" class="weui-grid">
         <div class="weui-grid__icon">
-            <img src="../example/images/icons/tibs.png" alt="">
+            <img src="../example/images/icons/sale.png" alt="">
         </div>
-        <p class="weui-grid__label">曼谷攻略</p>
+        <p class="weui-grid__label">职工列表</p>
     </a>
-    <a href="customer/aboutMe.jsp" class="weui-grid">
+    <a href="boss/aboutMe.jsp" class="weui-grid">
         <div class="weui-grid__icon">
             <img src="../example/images/icons/aboutMe.png" alt="">
         </div>

@@ -27,37 +27,37 @@
     <div class="weui-grids">
         <a href="customer/upcoming.jsp" class="weui-grid">
             <div class="weui-grid__icon">
-                <img src="../example/images/icons/6.png" alt="">
+                <img src="../example/images/icons/upcoming.png" alt="">
             </div>
             <p class="weui-grid__label">代办事项</p>
         </a>
         <a href="customer/myServer.jsp" class="weui-grid">
             <div class="weui-grid__icon">
-                <img src="../example/images/icons/2.png" alt="">
+                <img src="../example/images/icons/server.png" alt="">
             </div>
             <p class="weui-grid__label">我的客服</p>
         </a>
         <a href="customer/report.jsp" class="weui-grid">
             <div class="weui-grid__icon">
-                <img src="../example/images/icons/5.png" alt="">
+                <img src="../example/images/icons/report.png" alt="">
             </div>
             <p class="weui-grid__label">查报告</p>
         </a>
         <a href="customer/journeyMSG.jsp" class="weui-grid">
             <div class="weui-grid__icon">
-                <img src="../example/images/icons/3.png" alt="">
+                <img src="../example/images/icons/journey.png" alt="">
             </div>
             <p class="weui-grid__label">旅程信息</p>
         </a>
         <a href="customer/tibs.jsp" class="weui-grid">
             <div class="weui-grid__icon">
-                <img src="../example/images/icons/1.png" alt="">
+                <img src="../example/images/icons/tibs.png" alt="">
             </div>
             <p class="weui-grid__label">曼谷攻略</p>
         </a>
         <a href="customer/aboutMe.jsp" class="weui-grid">
             <div class="weui-grid__icon">
-                <img src="../example/images/icons/4.png" alt="">
+                <img src="../example/images/icons/aboutMe.png" alt="">
             </div>
             <p class="weui-grid__label">个人中心</p>
         </a>

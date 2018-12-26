@@ -9,7 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>出行攻略</title>
+    <title>旅程信息</title>
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
     <link rel="stylesheet" href="../../style/weui.css"/>
     <link rel="stylesheet" href="../../example/example.css"/>
@@ -19,7 +19,6 @@
     <script src="../../dist/jquery.validate.js"></script>
 </head>
 <body>
-<h1 style="align-items: center;">出行攻略</h1>
 
 </body>
 </html>
