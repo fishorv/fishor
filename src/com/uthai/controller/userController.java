@@ -87,4 +87,15 @@ public class userController {
         return "true";
     return "false";
     }
+    @RequestMapping(value = "/getCustomerInfo")
+    @ResponseBody
+    public TbCustomer getCustomerInfo(String openid){
+        return userService.selectCustomer(openid);
+    }
+    @RequestMapping(value = "/getOpenId")
+    @ResponseBody
+    public String getOpenId(HttpSession session){
+        JSONObject jsonObject= (JSONObject) session.getAttribute("user_info");
+        return jsonObject.getString("openid");
+    }
 }

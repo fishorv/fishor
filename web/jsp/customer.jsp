@@ -55,7 +55,7 @@
             </div>
             <p class="weui-grid__label">曼谷攻略</p>
         </a>
-        <a href="/jsp/customer/aboutMe.jsp" class="weui-grid">
+        <a href="/jsp/customer/aboutMe.jsp?openid=${openid}" class="weui-grid">
             <div class="weui-grid__icon">
                 <img src="../example/images/icons/aboutMe.png" alt="">
             </div>
@@ -63,8 +63,14 @@
         </a>
     </div>
     <script type="text/javascript">
-        $('#userNameForTittle').html('${userName}');
-        console.log('userName'+'${userName}');
+        $(function () {
+            console.log("openid:"+'${openid}');
+            var nameForTittle='${userInfo.userName}';
+            if (nameForTittle==''){
+                nameForTittle='${userName}'
+            }
+            $('#userNameForTittle').html(nameForTittle);
+        })
     </script>
 </body>
 </html>

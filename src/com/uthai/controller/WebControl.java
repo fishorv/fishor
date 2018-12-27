@@ -66,6 +66,10 @@ public class WebControl {
         Map<String,String> map= webService.getUserInfo(sessionInfo.getString("access_token"),sessionInfo.getString("openid"));
         TbUserRole tbUserRole= userService.login(map);
         if (tbUserRole!= null){
+            av.addObject("openid",map.get("openid"));
+            if (!userService.isFirstLoin(map.get("openid"))){
+                av.addObject("userInfo",userService.selectCustomer(map.get("openid")));
+            }
             av.addObject("userName",tbUserRole.getUserId());
             av.addObject("userRole",tbUserRole.getUserRole());
             av.addObject("branch",tbUserRole.getBranchGroup());

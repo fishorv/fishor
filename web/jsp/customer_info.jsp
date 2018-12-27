@@ -53,6 +53,12 @@
         </div>
     </div>
     <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">地址</label></div>
+        <div class="weui-cell__bd">
+            <input class="weui-input" id="address" type="text" placeholder="请输入住址"/>
+        </div>
+    </div>
+    <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">手机号</label></div>
         <div class="weui-cell__bd">
             <input class="weui-input" id="tel" type="text" placeholder="手机号"/>
@@ -71,11 +77,51 @@
     <div class="weui-btn-area">
         <a class="weui-btn weui-btn_primary" href="javascript:" id="doForm">确定</a>
     </div>
-    <%--</form>--%>
+</div>
+<div id="loadingToast" style="display:none;">
+    <div class="weui-mask_transparent"></div>
+    <div class="weui-toast">
+        <i class="weui-loading weui-icon_toast"></i>
+        <p class="weui-toast__content">数据加载中</p>
+    </div>
 </div>
 <script type="text/javascript">
+    $(function () {
+        var $loadingToast= $('#loadingToast');
+        $loadingToast.fadeIn(100);
+        $.get("/user/getOpenId.do",function (data) {
+            openid=data;
+            if (openid!=null){
+                $.post("/user/getCustomerInfo.do",{
+                        "openid":openid
+                    },function (data) {
+                    if (data.gender=="男"){
+                        console.log("性别：男")
+                        $("input[name='radio1']").eq('男').attr("checked","checked");
+                        $("input[name='radio1']").eq('女').removeAttr("checked");
+                        $("input[name='radio1']").eq('男').click();
+                    }else {
+                        console.log("性别：女")
+                        $("input[name='radio1']").eq('女').attr("checked","checked");
+                        $("input[name='radio1']").eq('男').removeAttr("checked");
+                        $("input[name='radio1']").eq('女').click();
+                    }
+                    $('#userName').val(data.userName);
+                    $('#userAge').val(data.userAge);
+                    $('#address').val(data.address);
+                    $('#tel').val(data.userTel);
+                    $loadingToast.fadeOut(100);
+                },"json");
+            }
+            else {
+                $loadingToast.fadeOut(100);
+            }
+
+        })
+
+    })
+
     function telCode() {
-        alert("/user/sendCode.do");
         $.post("/user/sendCode.do",{
             "telNumber":$('#tel').val()
         })
@@ -89,14 +135,21 @@
               return false;
           }
           else {
+              var userName=$('#userName').val();
+              var userAge =$('#userAge').val();
+              var gender  =$("input[name='radio1']:checked").val();
+              var userTel =$('#tel').val();
+              var address =$('#address').val();
               $.post("/user/formCustomer.do",{
-                  "userName":$('#userName').val(),
-                  "userAge":$('#userAge').val(),
-                  "gender":$("input[name='radio1']:checked").val(),
-                  "userTel":$('#tel').val()
+                  "userName":userName,
+                  "userAge":userAge,
+                  "gender":gender,
+                  "userTel":userTel,
+                  "address":address
               },function (data) {
                   if (data=="true"){
-                      window.location.href="/jsp/customer.jsp"
+                      window.location.href="/jsp/customer/aboutMe.jsp?userName="+userName+"&userAge="+userAge+"&gender="+gender
+                      +"userTel="+userTel;
                   } else{
                       alert("创建失败")
                   }

@@ -77,6 +77,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public TbCustomer selectCustomer(String openid) {
+        return customerMapper.selectByPrimaryKey(openid);
+    }
+
+    @Override
     public boolean saveCustomer(TbCustomer customer) {
         boolean result=true;
         try {

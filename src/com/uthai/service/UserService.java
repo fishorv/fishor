@@ -11,4 +11,5 @@ public interface UserService {
     boolean checkIfExit(String userName);
     boolean isFirstLoin(String openid);
     boolean saveCustomer(TbCustomer customer);
+    TbCustomer selectCustomer(String openid);
 }
