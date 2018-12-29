@@ -11,9 +11,9 @@
 <head>
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
     <title>用户信息</title>
-    <link rel="stylesheet" href="../style/weui.css"/>
-    <link rel="stylesheet" href="../example/example.css"/>
-    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <link rel="stylesheet" href="../../style/weui.css"/>
+    <link rel="stylesheet" href="../../example/example.css"/>
+    <script type="text/javascript" src="../../js/jquery.min.js"></script>
 </head>
 <body>
 <div class="weui-cells__title">完善个人信息</div>
@@ -47,9 +47,9 @@
         </label>
     </div>
     <div class="weui-cell">
-        <div class="weui-cell__hd"><label class="weui-label">年龄</label></div>
+        <div class="weui-cell__hd"><label class="weui-label">生日</label></div>
         <div class="weui-cell__bd">
-            <input class="weui-input" id="userAge" type="text" placeholder="请输入年龄"/>
+            <a href="javascript:;" class="weui-btn weui-btn_default" id="showDatePicker"></a>
         </div>
     </div>
     <div class="weui-cell">
@@ -64,16 +64,16 @@
             <input class="weui-input" id="tel" type="text" placeholder="手机号"/>
         </div>
         <div class="weui-cell__ft">
-        <button class="weui-vcode-btn" onclick="telCode()">获取验证码</button>
+            <button class="weui-vcode-btn" id="telCode">获取验证码</button>
         </div>
     </div>
-        <div class="weui-cell">
-            <div class="weui-cell__hd">
-                <label class="weui-label">验证码</label></div>
-            <div class="weui-cell__bd">
-                <input class="weui-input" name = "code" id="code" type="text"/>
-            </div>
+    <div class="weui-cell">
+        <div class="weui-cell__hd">
+            <label class="weui-label">验证码</label></div>
+        <div class="weui-cell__bd">
+            <input class="weui-input" name = "code" id="code" type="text"/>
         </div>
+    </div>
     <div class="weui-btn-area">
         <a class="weui-btn weui-btn_primary" href="javascript:" id="doForm">确定</a>
     </div>
@@ -87,24 +87,29 @@
 </div>
 <script type="text/javascript">
     $(function () {
+        var storage=window.localStorage;
         var $loadingToast= $('#loadingToast');
+        var timeout= setTimeout(function () {
+            $loadingToast.fadeOut(100);
+        },5000);
         $loadingToast.fadeIn(100);
         $.get("/user/getOpenId.do",function (data) {
-            openid=data;
+            openid=storage["openid"];
+            console.log(openid);
             if (openid!=null){
-                $.post("/user/getCustomerInfo.do",{
-                        "openid":openid
-                    },function (data) {
+                $.post("/user/getEmpInfo.do",{
+                    "openid":openid
+                },function (data) {
+                    if (timeout) {
+                        clearTimeout(timeout);
+                        timeout=null;
+                    }
                     if (data.gender=="男"){
-                        console.log("性别：男")
-                        $("input[name='radio1']").eq('男').attr("checked","checked");
-                        $("input[name='radio1']").eq('女').removeAttr("checked");
-                        $("input[name='radio1']").eq('男').click();
+                        $("#x11").prop("checked",true);
+                        $("#x12").prop("checked",false);
                     }else {
-                        console.log("性别：女")
-                        $("input[name='radio1']").eq('女').attr("checked","checked");
-                        $("input[name='radio1']").eq('男').removeAttr("checked");
-                        $("input[name='radio1']").eq('女').click();
+                        $("#x12").prop("checked",true);
+                        $("#x11").prop("checked",false);
                     }
                     $('#userName').val(data.userName);
                     $('#userAge').val(data.userAge);
@@ -119,45 +124,83 @@
 
         })
 
-    })
+    });
 
-    function telCode() {
+    $('#showDatePicker').on('click', function () {
+        weui.datePicker({
+            start: 1990,
+            end: new Date().getFullYear(),
+            onChange: function (result) {
+                console.log(result);
+            },
+            onConfirm: function (result) {
+                console.log(result);
+            }
+        });
+    });
+    $('#telCode').on('click',function () {
         $.post("/user/sendCode.do",{
             "telNumber":$('#tel').val()
         })
-    }
+    });
     $('#doForm').on('click',function () {
         $.post("/user/checkCode.do",{
             "code":$('#code').val()
         },function (data) {
-          if (data=="false"){
-              alert("验证码不正确！")
-              return false;
-          }
-          else {
-              var userName=$('#userName').val();
-              var userAge =$('#userAge').val();
-              var gender  =$("input[name='radio1']:checked").val();
-              var userTel =$('#tel').val();
-              var address =$('#address').val();
-              $.post("/user/formCustomer.do",{
-                  "userName":userName,
-                  "userAge":userAge,
-                  "gender":gender,
-                  "userTel":userTel,
-                  "address":address
-              },function (data) {
-                  if (data=="true"){
-                      window.location.href="/jsp/customer/aboutMe.jsp?userName="+userName+"&userAge="+userAge+"&gender="+gender
-                      +"userTel="+userTel;
-                  } else{
-                      alert("创建失败")
-                  }
-              })
-          }
+            if (data=="false"){
+                alert("验证码不正确！");
+                return false;
+            }
+            else {
+                var name=$('#userName').val();
+                var age =$('#userAge').val();
+                var position=$('#position').val();
+                var gender  =$("input[name='radio1']:checked").val();
+                var userTel =$('#tel').val();
+                var address =$('#address').val();
+                $.post("/user/formEmp.do",{
+                    "name":name,
+                    "age":age,
+                    "position":position,
+                    "gender":gender,
+                    "userTel":userTel,
+                    "address":address
+                },function (data) {
+                    if (data=="true"){
+                        window.location.href="/jsp/sale/aboutMe.jsp";
+                    } else{
+                        alert("创建失败");
+                    }
+                })
+            }
         })
 
     });
+    SetCookie= function ( name, value)//两个参数，一个是cookie的名子，一个是值
+    {
+        console.log("setCookie");
+        var Days = 1; //此 cookie 将被保存 1 天
+        var exp  = new Date();    //new Date("December 31, 9998");
+        exp.setTime(exp.getTime() + Days*24*60*60*1000);
+        document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
+    }
+    getCookie = function (name)//取cookies函数
+    {
+        console.log("getCookie");
+        var arr = document.cookie.match(new RegExp("(^| )"+name+"=([^;]*)(;|$)"));
+        if(arr != null)
+            return unescape(arr[2]);
+
+        return null;
+
+    }
+    delCookie=function(name)//删除cookie
+    {
+        var exp = new Date();
+        exp.setTime(exp.getTime() - 1);
+        var cval=getCookie(name);
+        if(cval!=null) document.cookie= name + "="+cval+";expires="+exp.toGMTString();
+    }
 </script>
 </body>
 </html>

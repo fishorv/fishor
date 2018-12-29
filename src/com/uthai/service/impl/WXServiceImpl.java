@@ -6,6 +6,7 @@ import com.uthai.reponsePojo.*;
 import com.uthai.requestPojo.MaterialParam;
 import com.uthai.message.NewsMessage;
 import com.uthai.requestPojo.*;
+import com.uthai.service.GetTokenFromServer;
 import com.uthai.service.WXService;
 import com.uthai.util.AccessToken;
 import net.sf.json.JSONArray;
@@ -25,11 +26,10 @@ import javax.annotation.Resource;
 import java.io.IOException;
 import java.util.*;
 
-@Service
+@Service("WXService")
 public class WXServiceImpl implements WXService {
     @Resource
-    TokenImpl tokenimp;
-//    ApplicationContext acc= new ClassPathXmlApplicationContext("applicationContext.xml");
+    GetTokenFromServer tokenimp;
     @Override
     public JSONObject doGetStr(String url) {
         CloseableHttpClient httpClient = HttpClients.createDefault();

@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import java.util.List;
 import java.util.Map;
-@Service
+@Service("UserService")
 public class UserServiceImpl implements UserService {
     @Resource
     TbUserRoleMapper userRoleMapper;
@@ -68,12 +68,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean isFirstLoin(String openid) {
-        boolean result=true;
         TbCustomer customer = customerMapper.selectByPrimaryKey(openid);
-        if (customer!=null){
-            result=false;
-        }
-        return result;
+        return customer==null;
     }
 
     @Override
@@ -87,6 +83,18 @@ public class UserServiceImpl implements UserService {
         try {
             customerMapper.insert(customer);
         }catch (Exception e){
+            e.printStackTrace();
+            result=false;
+        }
+        return result;
+    }
+    @Override
+    public boolean updataCustomer(TbCustomer customer) {
+        boolean result=true;
+        try {
+            customerMapper.updateByPrimaryKeySelective(customer);
+        }catch (Exception e){
+            e.printStackTrace();
             result=false;
         }
         return result;

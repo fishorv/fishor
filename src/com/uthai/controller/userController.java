@@ -1,10 +1,11 @@
 package com.uthai.controller;
 
 import com.uthai.po.TbCustomer;
+import com.uthai.po.TbEmp;
 import com.uthai.po.TbUserRole;
+import com.uthai.service.EmpService;
+import com.uthai.service.UserService;
 import com.uthai.service.WXService;
-import com.uthai.service.impl.UserServiceImpl;
-import com.uthai.service.impl.WXServiceImpl;
 import net.sf.json.JSONObject;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Controller;
@@ -19,17 +20,26 @@ import javax.servlet.http.HttpSession;
 @RequestMapping(value = "/user")
 public class userController {
     @Resource
-    WXServiceImpl wxService;
+    WXService wxService;
     @Resource
-    UserServiceImpl userService;
+    UserService userService;
+    @Resource
+    EmpService empService;
     @RequestMapping(value = "/firstLogin")
     @ResponseBody
-    public String isFirstLogin(HttpSession session){
+    public String isFirstLogin(@Param("role") String role, HttpSession session){
         String result="false";
         JSONObject userInfo= (JSONObject) session.getAttribute("user_info");
         String user = userInfo.getString("openid");
-        if (userService.isFirstLoin(user)){
-            result="true";
+        switch (role){
+            case "customer":{
+                result = String.valueOf(userService.isFirstLoin(user));
+                break;
+            }
+            case "sale":{
+                result =String.valueOf(empService.isFirstLoin(user));
+                break;
+            }
         }
         return result;
     }@RequestMapping(value = "/regist")
@@ -75,6 +85,24 @@ public class userController {
         System.out.println(customer.getGender());
         return String.valueOf(result);
     }
+    @RequestMapping(value = "/updataCustomer")
+    @ResponseBody
+    public String updataCustomer(TbCustomer customer,HttpSession session){
+        JSONObject userInfo = (JSONObject) session.getAttribute("user_info");
+        customer.setUserId(userInfo.getString("openid"));
+        boolean result=userService.saveCustomer(customer);
+        System.out.println(customer.getGender());
+        return String.valueOf(result);
+    }
+
+    @RequestMapping(value = "/formSale")
+    @ResponseBody
+    public String formSale(TbEmp emp, HttpSession session){
+        JSONObject userInfo = (JSONObject) session.getAttribute("user_info");
+        emp.setId(userInfo.getString("openid"));
+        boolean result=empService.register(emp);
+        return String.valueOf(result);
+    }
     @RequestMapping(value = "/sendCode")
     public void sendCode(@Param("telNumber") String telNumber){
         System.out.println(telNumber);
@@ -91,6 +119,11 @@ public class userController {
     @ResponseBody
     public TbCustomer getCustomerInfo(String openid){
         return userService.selectCustomer(openid);
+    }
+    @RequestMapping(value = "/getEmpInfo")
+    @ResponseBody
+    public TbEmp getEmpInfo(String openid){
+        return empService.selectEmp(openid);
     }
     @RequestMapping(value = "/getOpenId")
     @ResponseBody

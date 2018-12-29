@@ -97,6 +97,9 @@
       order by ${orderByClause}
     </if>
   </select>
+  <select id="selectByOpenId" resultMap="BaseResultMap" parameterType="String">
+    select * from tb_emp where id=#{openid}
+  </select>
   <delete id="deleteByExample" parameterType="com.uthai.po.TbEmpExample" >
     delete from tb_emp
     <if test="_parameter != null" >

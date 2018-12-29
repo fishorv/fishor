@@ -8,6 +8,7 @@ import com.uthai.message.item;
 import com.uthai.reponsePojo.BMIContent;
 import com.uthai.reponsePojo.BMItem;
 import com.uthai.reponsePojo.BatchgetMaterial;
+import com.uthai.service.*;
 import com.uthai.service.MessageService;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
@@ -21,7 +22,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.*;
 
-@Service
+@Service("MessageService")
 public class MessageServiceImpl  implements MessageService {
     public static final String MESSAGE_TEXT = "text";
     public static final String MESSAGE_IMAGE = "image";
@@ -35,11 +36,11 @@ public class MessageServiceImpl  implements MessageService {
     public static final String MESSAGE_CLICK = "CLICK";
     public static final String MESSAGE_VIEW = "VIEW";
     @Resource
-    EmpServiceImpl empService;
+    EmpService empService;
     @Resource
-    WXServiceImpl wxService;
+    WXService wxService;
     @Resource
-    TokenImpl tokenImpl;
+    GetTokenFromServer tokenImpl;
     @Override
     public String getMSG(HttpServletRequest request) {
         TextMessage textMessage = new TextMessage();
@@ -61,14 +62,6 @@ public class MessageServiceImpl  implements MessageService {
             switch(msgType) {
                 case MESSAGE_TEXT:
                     if (map.get("Content").equals("lufeicuntest")){ //检测到注册专用序列号
-                        int result=empService.register(fromUserName);
-                        if (result==0) {
-                            content = "注册成功!";
-                        }else
-                            content = "您已注册" ;
-                        textMessage.setContent(content);
-                        msg = TextMessageToXml(textMessage);
-                        msg = new String(msg.getBytes(), "GBK");
                     }else {
                         content = "系统目前正在维护，请前往官方网站www.uthbaby.com或添加客服：Youyun_1688咨询!";
                         textMessage.setContent(content);

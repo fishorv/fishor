@@ -13,6 +13,8 @@ public class TbEmp {
 
     private String birthday;
 
+    private String wechat;
+
     private String deptId;
 
     private String position;
@@ -179,5 +181,13 @@ public class TbEmp {
 
     public void setEmail(String email) {
         this.email = email == null ? null : email.trim();
+    }
+
+    public String getWechat() {
+        return wechat;
+    }
+
+    public void setWechat(String wechat) {
+        this.wechat = wechat;
     }
 }

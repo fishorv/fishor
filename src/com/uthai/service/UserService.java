@@ -12,4 +12,5 @@ public interface UserService {
     boolean isFirstLoin(String openid);
     boolean saveCustomer(TbCustomer customer);
     TbCustomer selectCustomer(String openid);
+    boolean updataCustomer(TbCustomer customer);
 }

@@ -1,5 +1,6 @@
 package com.uthai.controller;
 
+import com.uthai.service.MessageService;
 import com.uthai.service.impl.MessageServiceImpl;
 import com.uthai.util.CheckUtil;
 import org.apache.ibatis.annotations.Param;
@@ -13,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 @RequestMapping(value = "/wx",produces = "text/plain;charset=utf-8")
 public class WXController {
     @Resource
-    MessageServiceImpl messageUtil;
+    MessageService messageUtil;
     @RequestMapping(method = RequestMethod.GET)
     @ResponseBody
     public String doGet( @Param("signature")String signature,

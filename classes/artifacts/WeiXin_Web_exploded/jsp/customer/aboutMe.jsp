@@ -96,20 +96,20 @@
 </div>
 <script type="text/javascript">
     $('#edit').on('click',function () {
-        window.location.href="/jsp/customer_info.jsp"
+        window.location.href="customer_info.jsp"
     }),
     $(function () {
         var $loadingToast  = $('#loadingToast'),
             $androidDialog2 = $('#androidDialog2');
+        var storage=window.localStorage;
         $loadingToast.fadeIn(100);
           var openid;
-            $.get("/user/getOpenId.do",function (data) {
-              openid=data;
+              openid=storage["openid"];
                console.log("openid:"+openid);
-                var url="/user/firstLogin.do"
+                var url="/user/firstLogin.do?role=customer"
                 $.get(url,function (data) {
                     if (data=="true"){
-                        window.location.href="/jsp/customer_info.jsp"
+                        window.location.href="customer_info.jsp"
                     }
                     else {
                         $.post("/user/getCustomerInfo.do",{
@@ -131,7 +131,6 @@
                         );
                     }
                 })
-            });
     })
 
 </script>

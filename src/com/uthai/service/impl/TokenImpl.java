@@ -2,15 +2,17 @@ package com.uthai.service.impl;
 
 import com.uthai.po.Token;
 import com.uthai.service.GetTokenFromServer;
+import com.uthai.service.TokenService;
+import com.uthai.service.WXService;
 import com.uthai.util.AccessToken;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
-@Service
+@Service("GetTokenFromServer")
 public class TokenImpl implements GetTokenFromServer {
     @Resource
-    TokenServiceImpl tokenService;
+    TokenService tokenService;
     @Resource
-    WXServiceImpl wxService;
+    WXService wxService;
     @Override
     public String getTokenString() {
             Token token = tokenService.selectToken();

@@ -1,6 +1,7 @@
 package com.uthai.service.impl;
 
 import com.google.gson.JsonObject;
+import com.uthai.service.WXService;
 import com.uthai.service.WebService;
 import net.sf.json.JSONObject;
 import org.springframework.stereotype.Service;
@@ -8,10 +9,10 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import java.util.HashMap;
 import java.util.Map;
-@Service
+@Service("WebService")
 public class WebServiceImp implements WebService {
     @Resource
-    WXServiceImpl wxService;
+    WXService wxService;
     @Override
     public Map<String,String> getUserInfo(String token,String openId) {
         String url ="https://api.weixin.qq.com/sns/userinfo?" +

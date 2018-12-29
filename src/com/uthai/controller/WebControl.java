@@ -1,6 +1,7 @@
 package com.uthai.controller;
 
 import com.uthai.po.TbUserRole;
+import com.uthai.service.*;
 import com.uthai.service.impl.TokenImpl;
 import com.uthai.service.impl.UserServiceImpl;
 import com.uthai.service.impl.WXServiceImpl;
@@ -8,6 +9,7 @@ import com.uthai.service.impl.WebServiceImp;
 import com.uthai.util.CodeUtil;
 import net.sf.json.JSONObject;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -30,13 +32,13 @@ public class WebControl {
     static final String APPID="wx0331d8fe4217d8d6";
     static final String APPSECRET="b8949ff0e75591908fb5f7bd7d6b205d";
     @Resource
-    WebServiceImp webService;
+    WebService webService;
     @Resource
-    WXServiceImpl wxService;
+    WXService wxService;
     @Resource
-    UserServiceImpl userService;
+    UserService userService;
     @Resource
-    TokenImpl tokenImpl;
+    GetTokenFromServer tokenImpl;
     @RequestMapping(value = "/getCode")
     public String getCode() throws UnsupportedEncodingException {
         String backUrl="http://www.fishor.com.cn/web/callBack.do";

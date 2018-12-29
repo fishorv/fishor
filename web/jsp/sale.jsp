@@ -25,37 +25,19 @@
     <br><br><br><br><br><br>
 </div>
 <div class="weui-grids">
-    <a href="/jsp/customer/upcoming.jsp" class="weui-grid">
+    <a href="/jsp/sale/customers.jsp" class="weui-grid">
         <div class="weui-grid__icon">
-            <img src="../example/images/icons/upcoming.png" alt="">
+            <img src="../example/images/icons/customer.png" alt="">
         </div>
-        <p class="weui-grid__label">代办事项</p>
+        <p class="weui-grid__label">我的客户</p>
     </a>
-    <a href="/jsp/customer/myServer.jsp" class="weui-grid">
+    <a href="/jsp/sale/processing.jsp" class="weui-grid">
         <div class="weui-grid__icon">
-            <img src="../example/images/icons/server.png" alt="">
+            <img src="../example/images/icons/prosses.png" alt="">
         </div>
-        <p class="weui-grid__label">我的客服</p>
+        <p class="weui-grid__label">正在进行</p>
     </a>
-    <a href="/jsp/customer/report.jsp" class="weui-grid">
-        <div class="weui-grid__icon">
-            <img src="../example/images/icons/report.png" alt="">
-        </div>
-        <p class="weui-grid__label">查报告</p>
-    </a>
-    <a href="/jsp/customer/journeyMSG.jsp" class="weui-grid">
-        <div class="weui-grid__icon">
-            <img src="../example/images/icons/journey.png" alt="">
-        </div>
-        <p class="weui-grid__label">旅程信息</p>
-    </a>
-    <a href="/jsp/customer/tibs.jsp" class="weui-grid">
-        <div class="weui-grid__icon">
-            <img src="../example/images/icons/tibs.png" alt="">
-        </div>
-        <p class="weui-grid__label">曼谷攻略</p>
-    </a>
-    <a href="/jsp/customer/aboutMe.jsp?openid=${openid}" class="weui-grid">
+    <a href="/jsp/sale/aboutMe.jsp" class="weui-grid">
         <div class="weui-grid__icon">
             <img src="../example/images/icons/aboutMe.png" alt="">
         </div>
@@ -65,12 +47,20 @@
 <script type="text/javascript">
     $(function () {
         console.log("openid:"+'${openid}');
+        if(!window.localStorage){
+            alert("浏览器支持localstorage");
+            return false;
+        }else{
+            var storage=window.localStorage;
+            //写入a字段
+            storage["openid"]='${openid}';
+        }
         var nameForTittle='${userInfo.userName}';
         if (nameForTittle==''){
             nameForTittle='${userName}'
         }
         $('#userNameForTittle').html(nameForTittle);
-    })
+    });
 </script>
 </body>
 </html>

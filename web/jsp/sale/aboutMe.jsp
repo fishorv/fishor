@@ -37,19 +37,19 @@
                 <span class="weui-form-preview__value" id="gender"></span>
             </div>
             <div class="weui-form-preview__item">
-                <label class="weui-form-preview__label">年龄</label>
-                <span class="weui-form-preview__value" id="age"></span>
+                <label class="weui-form-preview__label">生日</label>
+                <span class="weui-form-preview__value" id="birth"></span>
             </div>
             <div class="weui-form-preview__item">
-                <label class="weui-form-preview__label">配偶</label>
-                <span class="weui-form-preview__value" id="relation"></span>
+                <label class="weui-form-preview__label">职位</label>
+                <span class="weui-form-preview__value" id="possion"></span>
             </div>
             <div class="weui-form-preview__item">
                 <label class="weui-form-preview__label">微信号</label>
                 <span class="weui-form-preview__value" id="nickname"></span>
             </div>
             <div class="weui-form-preview__item">
-                <label class="weui-form-preview__label">咨询公司</label>
+                <label class="weui-form-preview__label">所属公司</label>
                 <span class="weui-form-preview__value" id="branch"></span>
             </div>
             <div class="weui-form-preview__item">
@@ -62,11 +62,11 @@
             </div>
         </div>
     </div>
-        <div class="weui-form-preview__ft">
-            <a class="weui-form-preview__btn weui-form-preview__btn_default" href="javascript:" id="edit">修改</a>
-            <button class="weui-form-preview__btn weui-form-preview__btn_primary" onClick="javascript:history.back(-1);" id="goBack">返回</button>
-        </div>
+    <div class="weui-form-preview__ft">
+        <a class="weui-form-preview__btn weui-form-preview__btn_default" href="javascript:" id="edit">修改</a>
+        <button class="weui-form-preview__btn weui-form-preview__btn_primary" onClick="javascript:history.back(-1);" id="goBack">返回</button>
     </div>
+</div>
 </div>
 <div id="loadingToast" style="display:none;">
     <div class="weui-mask_transparent"></div>
@@ -96,43 +96,57 @@
 </div>
 <script type="text/javascript">
     $('#edit').on('click',function () {
-        window.location.href="customer_info.jsp"
+        window.location.href="../sale/sale_info.jsp"
     }),
-    $(function () {
-        var $loadingToast  = $('#loadingToast'),
-            $androidDialog2 = $('#androidDialog2');
-        var storage=window.localStorage;
-        $loadingToast.fadeIn(100);
-          var openid;
-              openid=storage["openid"];
-               console.log("openid:"+openid);
-                var url="/user/firstLogin.do?role=customer"
-                $.get(url,function (data) {
+        $(function () {
+            var storage=window.localStorage;
+            var $loadingToast  = $('#loadingToast'),
+                $androidDialog2 = $('#androidDialog2');
+            $loadingToast.fadeIn(100);
+            var openid=storage["openid"];
+                console.log("openid:"+openid);
+                var url="/user/firstLogin.do?role=sale"
+                $.post(url,function (data) {
                     if (data=="true"){
-                        window.location.href="customer_info.jsp"
+                        window.location.href="../sale/sale_info.jsp"
                     }
                     else {
-                        $.post("/user/getCustomerInfo.do",{
+                        $.post("/user/getEmpInfo.do",{
                                 "openid":openid
                             },function (data) {
-                            $('#tittleName').html(data.userName);
-                            $('#userName').html(data.userName);
-                            $('#age').html(data.userAge);
-                            $('#gender').html(data.gender);
-                            $('#relation').html(data.relationId);
-                            $('#nickname').html(data.wechat);
-                            $('#branch').html(data.branch);
-                            $('#adress').html(data.address);
-                            $('#userTel').html(data.userTel);
-                            $('#userAge').html(data.userAge);
-                            $loadingToast.fadeOut(100);
+                                $('#tittleName').html(data.name);
+                                $('#userName').html(data.name);
+                                $('#birth').html(data.birthday);
+                                $('#gender').html(data.gender);
+                                $('#nickname').html(data.wechat);
+                                $('#branch').html(data.branch);
+                                $('#adress').html(data.address);
+                                $('#userTel').html(data.tel);
+                                $loadingToast.fadeOut(100);
                             }
                             ,"json"
                         );
                     }
                 })
-    })
-
+        });
+     function getCookie (name)//取cookies函数
+    {
+        console.log("getCookie");
+        var Str = document.cookie;
+        var arr=Str.split(";");
+        for (var i=0;i<arr.length;i++) {
+            console.log(arr);
+        }
+        console.log("null") ;
+        return null;
+    };
+    delCookie=function(name)//删除cookie
+    {
+        var exp = new Date();
+        exp.setTime(exp.getTime() - 1);
+        var cval=getCookie(name);
+        if(cval!=null) document.cookie= name + "="+cval+";expires="+exp.toGMTString();
+    }
 </script>
 </body>
 </html>

@@ -17,6 +17,8 @@ public interface TbEmpMapper {
 
     List<TbEmp> selectByExample(TbEmpExample example);
 
+    TbEmp selectByOpenId(String openId);
+
     int updateByExampleSelective(@Param("record") TbEmp record, @Param("example") TbEmpExample example);
 
     int updateByExample(@Param("record") TbEmp record, @Param("example") TbEmpExample example);

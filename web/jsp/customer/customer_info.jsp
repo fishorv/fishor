@@ -11,9 +11,9 @@
 <head>
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
     <title>用户信息</title>
-    <link rel="stylesheet" href="../style/weui.css"/>
-    <link rel="stylesheet" href="../example/example.css"/>
-    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <link rel="stylesheet" href="../../style/weui.css"/>
+    <link rel="stylesheet" href="../../example/example.css"/>
+    <script type="text/javascript" src="../../js/jquery.min.js"></script>
 </head>
 <body>
 <div class="weui-cells__title">完善个人信息</div>
@@ -64,7 +64,7 @@
             <input class="weui-input" id="tel" type="text" placeholder="手机号"/>
         </div>
         <div class="weui-cell__ft">
-        <button class="weui-vcode-btn" onclick="telCode()">获取验证码</button>
+        <button class="weui-vcode-btn" id="telCode">获取验证码</button>
         </div>
     </div>
         <div class="weui-cell">
@@ -89,74 +89,75 @@
     $(function () {
         var $loadingToast= $('#loadingToast');
         $loadingToast.fadeIn(100);
-        $.get("/user/getOpenId.do",function (data) {
-            openid=data;
+        var storage=window.localStorage;
+        var editStatus='insert';
+            openid=storage["openid"];
             if (openid!=null){
                 $.post("/user/getCustomerInfo.do",{
                         "openid":openid
                     },function (data) {
                     if (data.gender=="男"){
                         console.log("性别：男")
-                        $("input[name='radio1']").eq('男').attr("checked","checked");
-                        $("input[name='radio1']").eq('女').removeAttr("checked");
-                        $("input[name='radio1']").eq('男').click();
+                        $("#x11").prop("checked",true);
+                        $("#x12").prop("checked",false);
                     }else {
                         console.log("性别：女")
-                        $("input[name='radio1']").eq('女').attr("checked","checked");
-                        $("input[name='radio1']").eq('男').removeAttr("checked");
-                        $("input[name='radio1']").eq('女').click();
+                        $("#x12").prop("checked",true);
+                        $("#x11").prop("checked",false);
                     }
-                    $('#userName').val(data.userName);
-                    $('#userAge').val(data.userAge);
-                    $('#address').val(data.address);
-                    $('#tel').val(data.userTel);
-                    $loadingToast.fadeOut(100);
+                        $('#userName').val(data.userName);
+                        $('#userAge').val(data.userAge);
+                        $('#address').val(data.address);
+                        $('#tel').val(data.userTel);
+                        $loadingToast.fadeOut(100);
+                        editStatus='updata';
                 },"json");
             }
             else {
                 $loadingToast.fadeOut(100);
             }
-
-        })
-
-    })
-
-    function telCode() {
-        $.post("/user/sendCode.do",{
-            "telNumber":$('#tel').val()
-        })
-    }
-    $('#doForm').on('click',function () {
-        $.post("/user/checkCode.do",{
-            "code":$('#code').val()
-        },function (data) {
-          if (data=="false"){
-              alert("验证码不正确！")
-              return false;
-          }
-          else {
-              var userName=$('#userName').val();
-              var userAge =$('#userAge').val();
-              var gender  =$("input[name='radio1']:checked").val();
-              var userTel =$('#tel').val();
-              var address =$('#address').val();
-              $.post("/user/formCustomer.do",{
-                  "userName":userName,
-                  "userAge":userAge,
-                  "gender":gender,
-                  "userTel":userTel,
-                  "address":address
-              },function (data) {
-                  if (data=="true"){
-                      window.location.href="/jsp/customer/aboutMe.jsp?userName="+userName+"&userAge="+userAge+"&gender="+gender
-                      +"userTel="+userTel;
-                  } else{
-                      alert("创建失败")
-                  }
-              })
-          }
-        })
-
+        $('#telCode').on('click',function () {
+            $.post("/user/sendCode.do",{
+                "telNumber":$('#tel').val()
+            })
+        });
+        $('#doForm').on('click',function () {
+            $.post("/user/checkCode.do",{
+                "code":$('#code').val()
+            },function (data) {
+                if (data=="false"){
+                    alert("验证码不正确！")
+                    return false;
+                }
+                else {
+                    var userName=$('#userName').val();
+                    var userAge =$('#userAge').val();
+                    var gender  =$("input[name='radio1']:checked").val();
+                    var userTel =$('#tel').val();
+                    var address =$('#address').val();
+                    var formUrl;
+                    if (editStatus=='insert'){
+                        formUrl="/user/formCustomer.do";
+                    }
+                    else {
+                        formUrl="/user/updataCustomer.do"
+                    }
+                        $.post(formUrl,{
+                            "userName":userName,
+                            "userAge":userAge,
+                            "gender":gender,
+                            "userTel":userTel,
+                            "address":address
+                        },function (data) {
+                            if (data=="true"){
+                                window.location.href="/jsp/customer/aboutMe.jsp";
+                            } else{
+                                alert("创建失败");
+                            }
+                        })
+                }
+            })
+        });
     });
 </script>
 </body>
