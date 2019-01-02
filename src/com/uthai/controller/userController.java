@@ -85,12 +85,20 @@ public class userController {
         System.out.println(customer.getGender());
         return String.valueOf(result);
     }
+    @RequestMapping(value = "/formEmp")
+    @ResponseBody
+    public String formEmp(TbEmp emp,HttpSession session){
+        JSONObject userInfo = (JSONObject) session.getAttribute("user_info");
+        emp.setId(userInfo.getString("openid"));
+        boolean result=empService.register(emp);
+        return String.valueOf(result);
+    }
     @RequestMapping(value = "/updataCustomer")
     @ResponseBody
     public String updataCustomer(TbCustomer customer,HttpSession session){
         JSONObject userInfo = (JSONObject) session.getAttribute("user_info");
         customer.setUserId(userInfo.getString("openid"));
-        boolean result=userService.saveCustomer(customer);
+        boolean result=userService.updataCustomer(customer);
         System.out.println(customer.getGender());
         return String.valueOf(result);
     }
@@ -104,16 +112,16 @@ public class userController {
         return String.valueOf(result);
     }
     @RequestMapping(value = "/sendCode")
+    @ResponseBody
     public void sendCode(@Param("telNumber") String telNumber){
         System.out.println(telNumber);
     }
+
     @RequestMapping(value = "/checkCode")
     @ResponseBody
     public String checkCode(@Param("code") String code){
     String codeFromBD="1234";
-    if (code.equals(codeFromBD))
-        return "true";
-    return "false";
+    return String.valueOf(code.equals(codeFromBD));
     }
     @RequestMapping(value = "/getCustomerInfo")
     @ResponseBody

@@ -316,9 +316,6 @@
         file_id = #{record.fileId,jdbcType=VARCHAR},
       </if>
     </set>
-    <if test="_parameter != null" >
-      <include refid="Update_By_Example_Where_Clause" />
-    </if>
     where user_id = #{record.userId,jdbcType=VARCHAR}
   </update>
   <update id="updateByExample" parameterType="map" >

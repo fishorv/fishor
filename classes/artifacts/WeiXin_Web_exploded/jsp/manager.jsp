@@ -10,7 +10,7 @@
 <html lang="zh-cmn-Hans">
 <head>
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
-    <title>个人中心</title>
+    <title>管理员</title>
     <link rel="stylesheet" href="../style/weui.css"/>
     <link rel="stylesheet" href="../example/example.css"/>
     <script type="text/javascript" src="../js/jquery.min.js"></script>
@@ -20,57 +20,48 @@
 </head>
 <body>
 <div class="page__hd">
-    <h1 class="page__title" id="userNameForTittle"></h1>
-    <p class="page__desc">您好！</p>
+    <h1 class="page__title">个人中心</h1>
+    <p class="page__desc">您好！管理员${userName}</p>
     <br><br><br><br><br><br>
 </div>
 <div class="weui-grids">
-    <a href="/jsp/customer/upcoming.jsp" class="weui-grid">
+    <a href="manager/customers.jsp" class="weui-grid">
         <div class="weui-grid__icon">
-            <img src="../example/images/icons/upcoming.png" alt="">
+            <img src="../example/images/icons/customer.png" alt="">
         </div>
-        <p class="weui-grid__label">代办事项</p>
+        <p class="weui-grid__label">客户列表</p>
     </a>
-    <a href="/jsp/customer/myServer.jsp" class="weui-grid">
+    <a href="manager/processing.jsp" class="weui-grid">
         <div class="weui-grid__icon">
-            <img src="../example/images/icons/server.png" alt="">
+            <img src="../example/images/icons/msg.png" alt="">
         </div>
-        <p class="weui-grid__label">我的客服</p>
+        <p class="weui-grid__label">进行中</p>
     </a>
-    <a href="/jsp/customer/report.jsp" class="weui-grid">
-        <div class="weui-grid__icon">
-            <img src="../example/images/icons/report.png" alt="">
-        </div>
-        <p class="weui-grid__label">查报告</p>
-    </a>
-    <a href="/jsp/customer/journeyMSG.jsp" class="weui-grid">
-        <div class="weui-grid__icon">
-            <img src="../example/images/icons/journey.png" alt="">
-        </div>
-        <p class="weui-grid__label">旅程信息</p>
-    </a>
-    <a href="/jsp/customer/tibs.jsp" class="weui-grid">
-        <div class="weui-grid__icon">
-            <img src="../example/images/icons/tibs.png" alt="">
-        </div>
-        <p class="weui-grid__label">曼谷攻略</p>
-    </a>
-    <a href="/jsp/customer/aboutMe.jsp?openid=${openid}" class="weui-grid">
+    <a href="manager/aboutMe.jsp" class="weui-grid">
         <div class="weui-grid__icon">
             <img src="../example/images/icons/aboutMe.png" alt="">
         </div>
         <p class="weui-grid__label">个人中心</p>
     </a>
+    <a href="manager/counting.jsp" class="weui-grid">
+        <div class="weui-grid__icon">
+            <img src="../example/images/icons/count.png" alt="">
+        </div>
+        <p class="weui-grid__label">统计</p>
+    </a>
+    <a href="manager/empList.jsp" class="weui-grid">
+        <div class="weui-grid__icon">
+            <img src="../example/images/icons/sale.png" alt="">
+        </div>
+        <p class="weui-grid__label">职工列表</p>
+    </a>
+    <a href="#" class="weui-grid">
+        <div class="weui-grid__icon">
+            <img src="../example/images/icons/loading.png" alt="">
+        </div>
+        <p class="weui-grid__label">正在开发</p>
+    </a>
+
 </div>
-<script type="text/javascript">
-    $(function () {
-        console.log("openid:"+'${openid}');
-        var nameForTittle='${userInfo.userName}';
-        if (nameForTittle==''){
-            nameForTittle='${userName}'
-        }
-        $('#userNameForTittle').html(nameForTittle);
-    })
-</script>
 </body>
 </html>

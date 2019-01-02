@@ -154,7 +154,6 @@
             else {
                 var name=$('#userName').val();
                 var age =$('#userAge').val();
-                var position=$('#position').val();
                 var gender  =$("input[name='radio1']:checked").val();
                 var userTel =$('#tel').val();
                 var address =$('#address').val();
@@ -163,7 +162,7 @@
                     "age":age,
                     "position":position,
                     "gender":gender,
-                    "userTel":userTel,
+                    "telnumer":userTel,
                     "address":address
                 },function (data) {
                     if (data=="true"){
