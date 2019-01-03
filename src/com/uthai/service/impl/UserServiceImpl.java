@@ -3,13 +3,19 @@ package com.uthai.service.impl;
 import com.uthai.mapper.TbCustomerMapper;
 import com.uthai.mapper.TbUserRoleMapper;
 import com.uthai.po.TbCustomer;
+import com.uthai.po.TbCustomerExample;
 import com.uthai.po.TbUserRole;
 import com.uthai.service.UserService;
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
+import netscape.javascript.JSObject;
 import org.apache.shiro.crypto.hash.Md5Hash;
 import org.apache.shiro.crypto.hash.SimpleHash;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 @Service("UserService")
@@ -96,6 +102,28 @@ public class UserServiceImpl implements UserService {
         }catch (Exception e){
             e.printStackTrace();
             result=false;
+        }
+        return result;
+    }
+
+    @Override
+    public JSONArray getCustomerList(String role , String openid) {
+        JSONArray result=new JSONArray();
+        TbCustomerExample example = new TbCustomerExample();
+        TbCustomerExample.Criteria criteria = example.createCriteria();
+        if (role.equals("sale")){
+            criteria.andSalesIdEqualTo(openid);
+        }else if (role.equals("manager")){
+            TbUserRole userRole=userRoleMapper.selectByPrimaryKey(openid);
+            criteria.andBranchEqualTo(userRole.getBranchGroup());
+        }
+        example.setOrderByClause("create_date DESC");
+        List<TbCustomer> list=customerMapper.selectByExample(example);
+        for (TbCustomer c:list){
+            JSONObject object=new JSONObject();
+            object.put("name",c.getUserName());
+            object.put("openid",c.getUserId());
+            result.add(object);
         }
         return result;
     }

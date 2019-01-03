@@ -6,6 +6,7 @@ import com.uthai.po.TbUserRole;
 import com.uthai.service.EmpService;
 import com.uthai.service.UserService;
 import com.uthai.service.WXService;
+import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Controller;
@@ -123,20 +124,29 @@ public class userController {
     String codeFromBD="1234";
     return String.valueOf(code.equals(codeFromBD));
     }
+
     @RequestMapping(value = "/getCustomerInfo")
     @ResponseBody
     public TbCustomer getCustomerInfo(String openid){
         return userService.selectCustomer(openid);
     }
+
     @RequestMapping(value = "/getEmpInfo")
     @ResponseBody
     public TbEmp getEmpInfo(String openid){
         return empService.selectEmp(openid);
     }
+
     @RequestMapping(value = "/getOpenId")
     @ResponseBody
     public String getOpenId(HttpSession session){
         JSONObject jsonObject= (JSONObject) session.getAttribute("user_info");
         return jsonObject.getString("openid");
+    }
+
+    @RequestMapping(value = "/getCustomerList")
+    @ResponseBody
+    public JSONArray getCustomerList(@Param("role") String role, @Param("openid") String openid){
+        return userService.getCustomerList(role,openid);
     }
 }

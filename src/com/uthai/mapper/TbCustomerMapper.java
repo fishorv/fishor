@@ -19,6 +19,8 @@ public interface TbCustomerMapper {
 
     List<TbCustomer> selectByExample(TbCustomerExample example);
 
+    List<TbCustomer> selectAll();
+
     TbCustomer selectByPrimaryKey(String userId);
 
     int updateByExampleSelective(@Param("record") TbCustomer record, @Param("example") TbCustomerExample example);

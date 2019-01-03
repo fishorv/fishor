@@ -9,7 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="zh-cmn-Hans">
 <head>
-    <title>待办事项</title>
+    <title>客户列表</title>
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
     <link rel="stylesheet" href="../../style/weui.css"/>
     <link rel="stylesheet" href="../../example/example.css"/>
@@ -19,6 +19,39 @@
     <script src="../../dist/jquery.validate.js"></script>
 </head>
 <body>
-<h1 style="align-items: center;">待办事项</h1>
+<div class="weui-cells__title">客户列表</div>
+<div class="weui-cells" id="myList">
+
+</div>
+<script type="text/javascript">
+    $(function () {
+        var storage=window.localStorage;
+        $.post("/user/getCustomerList.do",{
+            "role":"boss",
+            "openid":storage["openid"]
+        },function (data) {
+            $.each(data,function(idx,obj)
+            {
+                var openid1=obj.openid;
+                var content="<a class=\"weui-cell weui-cell_access\" onclick=\"detailPage('"+openid1+"')\" href=\"javascript:;\">\n" +
+                    "        <div class=\"weui-cell__bd\">\n" +
+                    "            <p id=\"\">"+obj.name+"</p>\n" +
+                    "        </div>\n" +
+                    "        <div class=\"weui-cell__ft\">\n" +
+                    "        </div>\n" +
+                    "    </a>";
+                console.log(content);
+                $("#myList").append(content);
+            });
+        })
+    });
+
+    detailPage =function (openid) {
+        var storage=window.localStorage;
+        storage["c_openid"]=openid;
+        location.href="/jsp/detailInfo.jsp";
+    }
+
+</script>
 </body>
 </html>

@@ -2,7 +2,10 @@ package com.uthai.service;
 
 import com.uthai.po.TbCustomer;
 import com.uthai.po.TbUserRole;
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
 
+import java.util.List;
 import java.util.Map;
 
 public interface UserService {
@@ -13,4 +16,5 @@ public interface UserService {
     boolean saveCustomer(TbCustomer customer);
     TbCustomer selectCustomer(String openid);
     boolean updataCustomer(TbCustomer customer);
+    JSONArray getCustomerList(String role, String openid);
 }
