@@ -25,37 +25,37 @@
     <br><br><br><br><br><br>
 </div>
 <div class="weui-grids">
-    <a href="boss/customerList.jsp" class="weui-grid">
+    <a href="/jsp/boss/customerList.jsp" class="weui-grid">
         <div class="weui-grid__icon">
             <img src="../example/images/icons/customer.png" alt="">
         </div>
         <p class="weui-grid__label">客户列表</p>
     </a>
-    <a href="boss/jobDiv.jsp" class="weui-grid">
+    <a href="/jsp/boss/jobList.jsp" class="weui-grid">
         <div class="weui-grid__icon">
             <img src="../example/images/icons/msg.png" alt="">
         </div>
         <p class="weui-grid__label">任务安排</p>
     </a>
-    <a href="boss/allComingUp.jsp" class="weui-grid">
+    <a href="/jsp/boss/allComingUp.jsp" class="weui-grid">
         <div class="weui-grid__icon">
             <img src="../example/images/icons/prosses.png" alt="">
         </div>
         <p class="weui-grid__label">所有待办</p>
     </a>
-    <a href="boss/branch.jsp" class="weui-grid">
+    <a href="/jsp/boss/branch.jsp" class="weui-grid">
         <div class="weui-grid__icon">
             <img src="../example/images/icons/dept.png" alt="">
         </div>
         <p class="weui-grid__label">分公司</p>
     </a>
-    <a href="boss/empList.jsp" class="weui-grid">
+    <a href="/jsp/boss/empList.jsp" class="weui-grid">
         <div class="weui-grid__icon">
             <img src="../example/images/icons/sale.png" alt="">
         </div>
         <p class="weui-grid__label">职工列表</p>
     </a>
-    <a href="boss/aboutMe.jsp" class="weui-grid">
+    <a href="/jsp/boss/aboutMe.jsp" class="weui-grid">
         <div class="weui-grid__icon">
             <img src="../example/images/icons/aboutMe.png" alt="">
         </div>

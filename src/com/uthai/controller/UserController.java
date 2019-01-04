@@ -19,7 +19,7 @@ import javax.servlet.http.HttpSession;
 
 @Controller
 @RequestMapping(value = "/user")
-public class userController {
+public class UserController {
     @Resource
     WXService wxService;
     @Resource

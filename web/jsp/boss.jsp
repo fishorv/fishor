@@ -31,7 +31,7 @@
         </div>
         <p class="weui-grid__label">客户列表</p>
     </a>
-    <a href="/jsp/boss/jobDiv.jsp" class="weui-grid">
+    <a href="/jsp/boss/jobList.jsp" class="weui-grid">
         <div class="weui-grid__icon">
             <img src="../example/images/icons/msg.png" alt="">
         </div>

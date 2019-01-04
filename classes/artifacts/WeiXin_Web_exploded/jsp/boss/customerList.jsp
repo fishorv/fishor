@@ -21,15 +21,30 @@
 <body>
 <div class="weui-cells__title">客户列表</div>
 <div class="weui-cells" id="myList">
-
+</div>
+<div id="loadingToast" style="display:none;">
+    <div class="weui-mask_transparent"></div>
+    <div class="weui-toast">
+        <i class="weui-loading weui-icon_toast"></i>
+        <p class="weui-toast__content">数据加载中</p>
+    </div>
 </div>
 <script type="text/javascript">
     $(function () {
         var storage=window.localStorage;
+        var $loadingToast  = $('#loadingToast');
+        var timeout= setTimeout(function () {
+            $loadingToast.fadeOut(100);
+        },5000);
+        $loadingToast.fadeIn(100);
         $.post("/user/getCustomerList.do",{
             "role":"boss",
             "openid":storage["openid"]
         },function (data) {
+            if (timeout) {
+                clearTimeout(timeout);
+                timeout=null;
+            }
             $.each(data,function(idx,obj)
             {
                 var openid1=obj.openid;
@@ -40,8 +55,8 @@
                     "        <div class=\"weui-cell__ft\">\n" +
                     "        </div>\n" +
                     "    </a>";
-                console.log(content);
                 $("#myList").append(content);
+                $loadingToast.fadeOut(100);
             });
         })
     });

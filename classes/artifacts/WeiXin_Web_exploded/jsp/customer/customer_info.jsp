@@ -91,11 +91,18 @@
         $loadingToast.fadeIn(100);
         var storage=window.localStorage;
         var editStatus='insert';
+        var timeout= setTimeout(function () {
+            $loadingToast.fadeOut(100);
+        },5000);
             openid=storage["openid"];
             if (openid!=null){
                 $.post("/user/getCustomerInfo.do",{
                         "openid":openid
                     },function (data) {
+                    if (timeout) {
+                        clearTimeout(timeout);
+                        timeout=null;
+                    }
                     if (data.gender=="男"){
                         console.log("性别：男")
                         $("#x11").prop("checked",true);

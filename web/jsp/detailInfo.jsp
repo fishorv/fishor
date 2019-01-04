@@ -112,32 +112,42 @@
 </div>
 <script type="text/javascript">
     $('#edit').on('click',function () {
-        window.location.href="../sale/sale_info.jsp"
+        window.location.href="/customer/customer_info.jsp"
     }),
         $(function () {
             var storage=window.localStorage;
             var $loadingToast  = $('#loadingToast'),
                 $androidDialog2 = $('#androidDialog2');
+            var timeout= setTimeout(function () {
+                $loadingToast.fadeOut(100);
+            },5000);
             $loadingToast.fadeIn(100);
             var openid=storage["openid"];
             console.log("openid:"+openid);
-            var url="/user/firstLogin.do?role=sale"
+            var url="/user/firstLogin.do?role=customer"
             $.post(url,function (data) {
                 if (data=="true"){
-                    window.location.href="../sale/sale_info.jsp"
+                    window.location.href="/customer/customer_info.jsp"
                 }
                 else {
-                    $.post("/user/getEmpInfo.do",{
+                    $.post("/user/getCustomerInfo.do",{
                             "openid":openid
                         },function (data) {
-                            $('#tittleName').html(data.name);
-                            $('#userName').html(data.name);
-                            $('#birth').html(data.birthday);
-                            $('#gender').html(data.gender);
-                            $('#nickname').html(data.wechat);
-                            $('#branch').html(data.branch);
-                            $('#adress').html(data.address);
-                            $('#userTel').html(data.tel);
+                            if (timeout) {
+                                clearTimeout(timeout);
+                                timeout=null;
+                            }
+                            $('#tittleName').html(data.userName);
+                            $('#c_userName').html(data.userName);
+                            $('#c_date').html(data.createDate);
+                            $('#c_gender').html(data.gender);
+                            $('#c_nickname').html(data.wechat);
+                            $('#c_branch').html(data.branch);
+                            $('#c_adress').html(data.address);
+                            $('#c_userTel').html(data.userTel);
+                            $('#c_mesdate').html(data.mensesDate);
+                            $('#c_saleid').html(data.salesId);
+                            $('#c_relation').html(data.relationId);
                             $loadingToast.fadeOut(100);
                         }
                         ,"json"
@@ -145,24 +155,6 @@
                 }
             })
         });
-    function getCookie (name)//取cookies函数
-    {
-        console.log("getCookie");
-        var Str = document.cookie;
-        var arr=Str.split(";");
-        for (var i=0;i<arr.length;i++) {
-            console.log(arr);
-        }
-        console.log("null") ;
-        return null;
-    };
-    delCookie=function(name)//删除cookie
-    {
-        var exp = new Date();
-        exp.setTime(exp.getTime() - 1);
-        var cval=getCookie(name);
-        if(cval!=null) document.cookie= name + "="+cval+";expires="+exp.toGMTString();
-    }
 </script>
 </body>
 </html>

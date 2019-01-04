@@ -98,6 +98,7 @@ public class UserServiceImpl implements UserService {
     public boolean updataCustomer(TbCustomer customer) {
         boolean result=true;
         try {
+
             customerMapper.updateByPrimaryKeySelective(customer);
         }catch (Exception e){
             e.printStackTrace();

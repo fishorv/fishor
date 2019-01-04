@@ -48,7 +48,7 @@
 			<property name="enableSubPackages" value="false" />
 		</javaClientGenerator>
 		<!-- 指定数据库表 -->
-		<table schema="uthai" tableName="web_token"></table>
+		<table schema="uthai" tableName="tb_job"></table>
 
 
 
