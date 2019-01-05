@@ -65,6 +65,10 @@
                 <label class="weui-form-preview__label">备注</label>
                 <span class="weui-form-preview__value">[remark]</span>
             </div>
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">任务状态</label>
+                <span class="weui-form-preview__value">[status]</span>
+            </div>
         </div>
         <div class="weui-form-preview__ft">
             <a class="weui-form-preview__btn weui-form-preview__btn_primary" href="javascript:">操作</a>
@@ -90,7 +94,8 @@
                 'createDate': '测试4',
                 'content': '测试4',
                 'address': '测试4',
-                'remark': '测试4'
+                'remark': '测试4',
+                'status':'状态'
             }[key];
         });
         console.log(source);

@@ -31,7 +31,7 @@
 </div>
 <script type="text/javascript">
     $(function () {
-        var storage=window.localStorage;
+        var storage=window.sessionStorage;
         var $loadingToast  = $('#loadingToast');
         var timeout= setTimeout(function () {
             $loadingToast.fadeOut(100);
@@ -62,7 +62,7 @@
     });
 
     detailPage =function (openid) {
-        var storage=window.localStorage;
+        var storage=window.sessionStorage;
         storage["c_openid"]=openid;
         location.href="/jsp/detailInfo.jsp";
     }

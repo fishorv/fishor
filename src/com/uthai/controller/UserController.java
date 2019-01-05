@@ -2,8 +2,10 @@ package com.uthai.controller;
 
 import com.uthai.po.TbCustomer;
 import com.uthai.po.TbEmp;
+import com.uthai.po.TbJob;
 import com.uthai.po.TbUserRole;
 import com.uthai.service.EmpService;
+import com.uthai.service.JobService;
 import com.uthai.service.UserService;
 import com.uthai.service.WXService;
 import net.sf.json.JSONArray;
@@ -26,6 +28,8 @@ public class UserController {
     UserService userService;
     @Resource
     EmpService empService;
+    @Resource
+    JobService jobService;
     @RequestMapping(value = "/firstLogin")
     @ResponseBody
     public String isFirstLogin(@Param("role") String role, HttpSession session){
@@ -148,5 +152,15 @@ public class UserController {
     @ResponseBody
     public JSONArray getCustomerList(@Param("role") String role, @Param("openid") String openid){
         return userService.getCustomerList(role,openid);
+    }
+    @RequestMapping(value = "/getEmpList")
+    @ResponseBody
+    public JSONArray getEmpList(@Param("role") String role, @Param("openid") String openid){
+        return empService.getEmpList(role,openid);
+    }
+    @RequestMapping(value = "/createJob")
+    @ResponseBody
+    public String createJob(TbJob job){
+        return String.valueOf(jobService.createJob(job));
     }
 }

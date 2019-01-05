@@ -115,7 +115,7 @@
         window.location.href="/customer/customer_info.jsp"
     }),
         $(function () {
-            var storage=window.localStorage;
+            var storage=window.sessionStorage;
             var $loadingToast  = $('#loadingToast'),
                 $androidDialog2 = $('#androidDialog2');
             var timeout= setTimeout(function () {

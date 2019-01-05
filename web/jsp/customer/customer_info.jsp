@@ -89,7 +89,7 @@
     $(function () {
         var $loadingToast= $('#loadingToast');
         $loadingToast.fadeIn(100);
-        var storage=window.localStorage;
+        var storage=window.sessionStorage;
         var editStatus='insert';
         var timeout= setTimeout(function () {
             $loadingToast.fadeOut(100);
