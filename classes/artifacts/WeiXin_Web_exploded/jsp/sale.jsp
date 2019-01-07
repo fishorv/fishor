@@ -47,11 +47,11 @@
 <script type="text/javascript">
     $(function () {
         console.log("openid:"+'${openid}');
-        if(!window.localStorage){
+        if(!window.sessionStorage){
             alert("浏览器支持localstorage");
             return false;
         }else{
-            var storage=window.localStorage;
+            var storage=window.sessionStorage;
             //写入a字段
             storage["openid"]='${openid}';
         }

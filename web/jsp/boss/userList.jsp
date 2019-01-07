@@ -19,7 +19,7 @@
     <script src="../../dist/jquery.validate.js"></script>
 </head>
 <body>
-<div class="weui-cells__title">客户列表</div>
+<div class="weui-cells__title">用户列表</div>
 <div class="page__bd">
     <div class="weui-search-bar" id="searchBar">
         <form class="weui-search-bar__form">

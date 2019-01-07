@@ -101,7 +101,7 @@
     $(function () {
         var $loadingToast  = $('#loadingToast'),
             $androidDialog2 = $('#androidDialog2');
-        var storage=window.localStorage;
+        var storage=window.sessionStorage;
         $loadingToast.fadeIn(100);
           var openid;
               openid=storage["openid"];

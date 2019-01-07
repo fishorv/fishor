@@ -99,7 +99,7 @@
         window.location.href="../sale/sale_info.jsp"
     }),
         $(function () {
-            var storage=window.localStorage;
+            var storage=window.sessionStorage;
             var $loadingToast  = $('#loadingToast'),
                 $androidDialog2 = $('#androidDialog2');
             $loadingToast.fadeIn(100);

@@ -10,6 +10,7 @@ import com.uthai.service.JobService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.Date;
 
 @Service
 public class JobServiceImpl implements JobService {
@@ -25,11 +26,15 @@ public class JobServiceImpl implements JobService {
         Dynamic dynamic=dynamicMapper.selectByPrimaryKey(job.getOpenid());
         TbCustomer customer= customerMapper.selectByPrimaryKey(job.getOpenid());
         job.setSale(customer.getSalesman());
-        job.setRoom(dynamic.getHotel());
+        job.setRoom(dynamic.getcHotel());
+        job.setCreatedate(new Date());
+//        job.setName("lufeicun");
+//        job.setServername("doge");
         try {
             jobMapper.insert(job);
         }catch (Exception e)
         {
+            e.printStackTrace();
             result = false;
         }
         return result;

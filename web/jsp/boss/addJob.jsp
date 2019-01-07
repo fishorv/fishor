@@ -82,7 +82,7 @@
             servTime=new Array(),
             servType,
             servContent,
-            address,
+            servAddress,
             servRemark;
         $('#userName').html(storage['custName']);
         $('#serverName').html(storage['serverName']);
@@ -132,50 +132,50 @@
         $('#timePicker').on('click', function () {
             weui.picker([{
                     label: '上午',
-                    value: 'am:'
+                    value: '0'
                 },
                     {
                         label: '下午',
-                        value: 'pm:'
+                        value: '1'
                     }
                 ],
                 [
-                    {
-                        label: '1',
-                        value: '1:'
-                    }, {
+                {
+                    label: '1',
+                    value: '1'
+                }, {
                     label: '2',
-                    value: '2:'
+                    value: '2'
                 }, {
                     label: '3',
-                    value: '3:'
+                    value: '3'
                 }, {
                     label: '4',
-                    value: '4:'
+                    value: '4'
                 }, {
                     label: '5',
-                    value: '5:'
+                    value: '5'
                 }, {
                     label: '6',
-                    value: '6:'
+                    value: '6'
                 }, {
                     label: '7',
-                    value: '7:'
+                    value: '7'
                 }, {
                     label: '8',
-                    value: '8:'
+                    value: '8'
                 }, {
                     label: '9',
-                    value: '9:'
+                    value: '9'
                 }, {
                     label: '10',
-                    value: '10:'
+                    value: '10'
                 }, {
                     label: '11',
-                    value: '11:'
+                    value: '11'
                 }, {
                     label: '12',
-                    value: '12:'
+                    value: '12'
                 }
                 ], [
                     {
@@ -241,22 +241,32 @@
         $("#preview").on('click',function () {
             servContent=$("#content").val();
             servRemark =$("#remark").val();
+            servAddress=$("#address").val();
             var storage=window.sessionStorage;
-            storage['custName']=custName;
-            storage['servName']=servName;
+            var hh=parseInt(servTime[1]);
+            var mm=parseInt(servTime[2]);
+            if (servTime[0]=='1'&&servTime[1]!='12'){
+                hh+=12;
+            }
+            console.log(servDate[0]+'/'+servDate[1]+'/'+servDate[2]+' '+hh+':'+mm+':00');
+            var date= new Date(servDate[0]+'/'+servDate[1]+'/'+servDate[2]+' '+hh+':'+mm+':00');
+            console.log(formatDate(date));
+            date.getHours();
             storage['servType']=servType;
-            storage['servDate']=servDate;
-            storage['servTime']=servTime;
-            storage['servAddress']=address;
+            storage['servDate']=formatDate(date);
+            // storage['servTime']=servTime;
+            storage['servAddress']=servAddress;
             storage['servContent']=servContent;
             storage['servRemark']=servRemark;
             $.post("/user/createJob.do",{
                 'openid'     :custId,
-                'name'       :  storage['custName'],
-                'server'     :  storage['servName'],
+                'name'       :storage['custName'],
+                'time'       :storage['servDate'],
+                'serverid'   :storage['serverOpen'],
+                'servername' :  storage['serverName'],
                 'room'       : '',
                 'sale'       : '',
-                'time'       :storage['servTime'],
+                // 'time'       :storage['servTime'],
                 'createDate' :'',
                 'content'    : storage['servContent'],
                 'address'    : storage['servAddress'],
@@ -267,7 +277,10 @@
                     location.href='./preview.jsp'
                 }
             })
-        })
+        });
+        function formatDate(date) {
+            return date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
+        }
     })
 
 
