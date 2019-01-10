@@ -24,6 +24,7 @@
     <p class="page__desc">任务预览</p>
 </div>
 <div id="taskList"></div>
+<script type="text/html" id="taskTemp">
 <div class="weui-form-preview">
     <div class="weui-form-preview__hd">
         <div class="weui-form-preview__item">
@@ -71,9 +72,11 @@
     </div>
     <div class="weui-form-preview__ft">
         <a class="weui-form-preview__btn weui-form-preview__btn_default" href="javascript:" id="edit">修改</a>
-        <button class="weui-form-preview__btn weui-form-preview__btn_primary"  id="confirm">确定</button>
+        <%--修改未完成--%>
+        <button class="weui-form-preview__btn weui-form-preview__btn_primary" onclick="location.href='./jobList.jsp'">确定</button>
     </div>
 </div>
+</script>
 <script type="text/javascript">
     $().ready(function () {
         var storage=window.sessionStorage;
@@ -83,10 +86,10 @@
         var source = myHtml.replace(reg,function (node,key) {
             return {
                 'name'       :  storage['custName'],
-                'server'     :  storage['servName'],
+                'server'     :  storage['serverName'],
                 'room'       : '',
                 'sale'       : '',
-                'time'       :storage['servTime'],
+                'time'       :storage['servDate'],
                 'createDate' :'',
                 'content'    : storage['servContent'],
                 'address'    : storage['servAddress'],
@@ -94,8 +97,6 @@
                 'status'     :''
             }[key];
         });
-        console.log(source);
-        $('#taskList').append(source);
         $('#taskList').append(source);
     })
 </script>

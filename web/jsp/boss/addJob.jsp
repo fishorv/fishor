@@ -263,7 +263,7 @@
                 'name'       :storage['custName'],
                 'time'       :storage['servDate'],
                 'serverid'   :storage['serverOpen'],
-                'servername' :  storage['serverName'],
+                'servername' :storage['serverName'],
                 'room'       : '',
                 'sale'       : '',
                 // 'time'       :storage['servTime'],
@@ -273,7 +273,7 @@
                 'remark'     : storage['servRemark'],
                 'status'     :''
             },function (data) {
-                if (data=="ture"){
+                if (data=="true"){
                     location.href='./preview.jsp'
                 }
             })

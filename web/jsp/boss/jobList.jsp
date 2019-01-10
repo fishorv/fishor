@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../../example/example.css"/>
     <script type="text/javascript" src="../../js/jquery.min.js"></script>
     <script type="text/javascript" src="../../js/myjs.js"></script>
+    <script type="text/javascript" src="../../js/jquery-dateformat.min.js"></script>
     <script src="../../lib/jquery.js"></script>
     <script src="../../dist/jquery.validate.js"></script>
 </head>
@@ -73,35 +74,50 @@
         <div class="weui-form-preview__ft">
             <a class="weui-form-preview__btn weui-form-preview__btn_primary" href="javascript:">操作</a>
         </div>
+        <br>
     </div>
-    <br><br>
 </script>
 <br><br>
 <a href="/jsp/boss/addJob.jsp" class="weui-btn weui-btn_primary">新建任务</a>
+<div class="page__ft">
+    <a href="javascript:home()"><img src="../../example/images/icon_footer_link.png" /></a>
+</div>
+<div id="loadingToast" style="display:none;">
+    <div class="weui-mask_transparent"></div>
+    <div class="weui-toast">
+        <i class="weui-loading weui-icon_toast"></i>
+        <p class="weui-toast__content">数据加载中</p>
+    </div>
+</div>
 <script type="text/javascript">
     $().ready(function () {
         // var reg = new RegExp("([\[]*?)\]", 'igm');
         var reg = new RegExp("\\[([^\\[\\]]*?)\\]", 'igm'); //i g m是指分别用于指定区分大小写的匹配、全局匹配和多行匹配。
         var myHtml = document.getElementById("taskTemp").innerHTML;
-        console.log(myHtml);
-        var source = myHtml.replace(reg,function (node,key) {
-            return {
-                'name': '测试1',
-                'server': '测试2',
-                'room': '测试3',
-                'sale': '测试4',
-                'time': '测试4',
-                'createDate': '测试4',
-                'content': '测试4',
-                'address': '测试4',
-                'remark': '测试4',
-                'status':'状态'
-            }[key];
+        $.get("/job/getJobList.do",function (data) {
+            $.each(data,function(idx,obj){
+                var source = myHtml.replace(reg,function (node,key) {
+                    return {
+                        'name': obj.name,
+                        'server': obj.servername,
+                        'room': obj.room,
+                        'sale': obj.sale,
+                        'time': getLocalTime(obj.time.time),
+                        'createDate':getLocalTime(obj.createdate.time),
+                        'content': obj.content,
+                        'address': obj.address,
+                        'remark' : obj.remark,
+                        'status' :obj.status
+                    }[key];
+                });
+                $('#taskList').append(source);
+            });
+
         });
-        console.log(source);
-        $('#taskList').append(source);
-        $('#taskList').append(source);
     })
+    function getLocalTime(nS) {
+        return new Date(parseInt(nS) * 1000).toLocaleString().replace(/:\d{1,2}$/,' ');
+    }
 </script>
 </body>
 </html>

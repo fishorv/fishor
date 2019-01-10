@@ -17,15 +17,11 @@ public class DateConverter implements Converter<String,Date> {
 	@Override
 	public Date convert(String birth) {
 		//字符串->Date对象
-		if (birth.substring(1,1).equals("m")){
-			String[] arr=birth.split(":,");
-		}else {
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		try {
 			return sdf.parse(birth);
 		} catch (ParseException e) {
 			e.printStackTrace();
-		}
 		}
 		return null;
 	}

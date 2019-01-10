@@ -6,11 +6,15 @@ import com.uthai.mapper.TbJobMapper;
 import com.uthai.po.Dynamic;
 import com.uthai.po.TbCustomer;
 import com.uthai.po.TbJob;
+import com.uthai.po.TbJobExample;
 import com.uthai.service.JobService;
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.Date;
+import java.util.List;
 
 @Service
 public class JobServiceImpl implements JobService {
@@ -28,8 +32,6 @@ public class JobServiceImpl implements JobService {
         job.setSale(customer.getSalesman());
         job.setRoom(dynamic.getcHotel());
         job.setCreatedate(new Date());
-//        job.setName("lufeicun");
-//        job.setServername("doge");
         try {
             jobMapper.insert(job);
         }catch (Exception e)
@@ -39,4 +41,30 @@ public class JobServiceImpl implements JobService {
         }
         return result;
     }
+
+    @Override
+    public JSONArray getJobList() {
+        TbJobExample example= new TbJobExample();
+        JSONArray result=new JSONArray();
+        List<TbJob> jobs=jobMapper.selectByExample(example);
+        for (TbJob job:jobs){
+            try {
+                if (job.getContent()==null){
+                    job.setContent("");
+                }
+                if (job.getRemark()==null){
+                    job.setRemark("");
+                }if (job.getAddress()==null){
+                    job.setAddress("");
+                }if (job.getStatus()==null){
+                    job.setStatus("");
+                }
+                result.add(JSONObject.fromObject(job));
+            }catch (Exception e){
+                continue;
+            }
+        }
+         return result;
+    }
 }
+
